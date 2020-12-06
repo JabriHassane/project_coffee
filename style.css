@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.nav-style ul li a{
+    color: #fff !important; 
+
+}
+
+.caption-content{
+    height: 50%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn.btn-border-w {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.75);
+    color: #fff;
+}
+
+.btn.btn-border-w:hover {
+    background: #fff;
+    border: 1px solid rgba(255,255,255,0.75);
+    color: #000;
+}
+.titan-title-size-1 {
+    letter-spacing: 4px;
+    font-size: 20px;
+}
+
+.titan-title-size-4 {
+    letter-spacing: 240px;
+    font-weight: 400;
+    font-size: 48px;
+}
+
+.font-alt {
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn {
+    border-radius: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    padding: 8px 37px;
+}
+.module, .module-small {
+    position: relative;
+    padding: 140px 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+::selection {
+    background: #000;
+    color: #fff;
+}
+.module-title {
+    position: relative;
+    letter-spacing: 4px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    color: #111;
+    margin: 0 0 70px;
+}
