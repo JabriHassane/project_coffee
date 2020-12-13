@@ -95,3 +95,28 @@ body {
 .module {
     border-top: 1px solid gray;
 }
+
+#cover-cof {
+    width: 100%;
+    height: 500px;
+    background-image: url(3376542.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.check-menu {
+    height: 100px;
+    padding: 50px;
+}
+
+.check-menu .btn.btn-border-w {
+    background: transparent;
+    border: 1px solid rgba(3, 3, 3, 0.75);
+    color: rgb(0, 0, 0);
+}
+
+.check-menu .btn.btn-border-w:hover {
+    background: rgb(70, 69, 69);
+    border: 1px solid rgba(5, 5, 5, 0.75);
+    color: rgb(255, 255, 255);
+}
