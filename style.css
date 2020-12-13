@@ -1,15 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-.nav-style ul li a{
-    color: #fff !important; 
-
 }
 
-.caption-content{
+body {
+    padding: 0;
+}
+
+.nav-style ul li a {
+    color: #fff !important;
+}
+
+.caption-content {
     height: 50%;
     color: #fff;
     display: flex;
@@ -17,23 +20,25 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .btn.btn-border-w {
     background: transparent;
-    border: 1px solid rgba(255,255,255,0.75);
+    border: 1px solid rgba(255, 255, 255, 0.75);
     color: #fff;
 }
 
 .btn.btn-border-w:hover {
     background: #fff;
-    border: 1px solid rgba(255,255,255,0.75);
+    border: 1px solid rgba(255, 255, 255, 0.75);
     color: #000;
 }
-.titan-title-size-1 {
+
+.oxford-title-size-1 {
     letter-spacing: 4px;
     font-size: 20px;
 }
 
-.titan-title-size-4 {
+.oxford-title-size-4 {
     letter-spacing: 240px;
     font-weight: 400;
     font-size: 48px;
@@ -53,7 +58,9 @@
     font-size: 11px;
     padding: 8px 37px;
 }
-.module, .module-small {
+
+.module,
+.module-small {
     position: relative;
     padding: 140px 0;
     background-repeat: no-repeat;
@@ -65,6 +72,7 @@
     background: #000;
     color: #fff;
 }
+
 .module-title {
     position: relative;
     letter-spacing: 4px;
@@ -73,4 +81,17 @@
     font-size: 30px;
     color: #111;
     margin: 0 0 70px;
+}
+
+.localisation svg {
+    height: 22px;
+    margin: 0 10px -3px 25px;
+}
+
+.confort {
+    text-align: center;
+}
+
+.module {
+    border-top: 1px solid gray;
 }
