@@ -38,23 +38,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
         </div>
     </nav>
+
     <section>
         <div style="height: 100vh; width: 100%; background-image: url(./img/image-cof-lait.jpg); background-size: cover; background-repeat: no-repeat; display: flex; align-items: center; justify-content: center;">
             <div class="caption-content">
@@ -64,8 +54,8 @@
                 <a class="section-scroll btn btn-border-w btn-round" href="#menu">Check Our Menu</a>
             </div>
         </div>
-
     </section>
+
     <section class="module" id="services" style="padding-left: 150px; padding-right: 150px;">
 
         <div class="container confort">
@@ -171,8 +161,12 @@
         </div>
     </section>
 
-    <section id="cover-cof">
-        <div class="cover"></div>
+    <section>
+        <div class="cover">
+            <div class="cover-cof">
+                <h2>THE BEST RESTAURANT IN TOWN<br> ENJOY YOUR MEALE</h2>
+            </div>
+        </div>
     </section>
 
     <section class="module" id="menu">
@@ -313,117 +307,104 @@
 
 
     <section class="module pt-0 pb-0">
-        <div class="row position-relative m-0" style="background-color: gray;">
-            <div class="col-xs-12 col-md-6 side-image-text" style="padding-left: 100px;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+        <div class="row position-relative m-0" style="background-color: rgba(231, 231, 231, 0.795);">
+            <div class="order col-xs-12 col-md-6 side-image-text">
                 <div class="row">
                     <div class="col-sm-12">
                         <h2 class="module-title font-alt align-left">Demander en ligne</h2>
                         <p class="module-subtitle font-serif align-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                     </div>
                 </div>
-                <form class="demander-form" id="demander" action="#" method="post"style="
-                width: 100%;">
+                <form>
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="icon-clock"></i>
-                            </div>
+                        <label for="exampleInputEmail1">Ta Position</label>
+                        <input type="text" class="form-control" placeholder="ta Position">
+                        <small id="positionHelp" class="form-text text-muted">We'll never share your position with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Téléphone</label>
+                        <input type="tel" class="form-control" placeholder="Telephone">
+                        <small id="positionHelp" class="form-text text-muted">We'll never share your numbre with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Ton Ordre</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>ordre 1</option>
+                          <option>ordre 2</option>
+                          <option>ordre 3</option>
+                          <option>ordre 4</option>
+                          <option>ordre 5</option>
+                          <option>.......</option>
+                        </select>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">accepter les <a href="#">conditions</a></label>
+                    </div>
 
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="icon-profile-male"></i>
-                            </div>
-                            <input style="width: 100%;">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="icon-envelope"></i>
-                            </div>
-                            <input style="width: 100%;">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-g btn-round btn-block btn-lg mt-20" id="rfsubmit" type="submit">
+                    <button class="btn btn-g btn-round btn-block btn-lg mt-20 border" id="rfsubmit" type="submit">
                             <i class="fa fa-paper-plane" style="margin-right: 10px;"></i>Demander</button>
-                    </div>
-                    <div id="reservationFormResponse"></div>
                 </form>
+                <div id="reservationFormResponse"></div>
             </div>
-            <div class="ordre-image col-xs-12 col-md-6 col-md-offset-6"> <img src="./img/order.jpg" alt="" style="width: 80%; height: 750px; margin-left: 170px;"></div>
+            <div class="ordre-image col-xs-12 col-md-6 col-md-offset-6 text-right p-0">
+                <img src="./img/order.jpg" alt="" style="width: 80%; height: 750px;"></div>
         </div>
     </section>
 
 
-    <section class="module" id="team">
+    <section id="team">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <h2 class="module-title font-alt">Meet Our Team</h2>
-                    <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
+            <div class="teamtext">
+                <div>
+                    <h2>Meet Our Team</h2>
+                    <div>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
                 </div>
             </div>
-            <div class="row">
-                <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <div class="team-item">
-                        <div class="team-image"><img src="./img/serve1.jpg" style="width: 400px; height: 600px;" alt="Member Photo">
-                            <div class="team-detail">
-                                <h5 class="font-alt">Hi all</h5>
-                                <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                                <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
-                                            class="fa fa-twitter"></i></a><a href="#"><i
-                                            class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
-                                </div>
+            <div class="equipe">
+                <div class="equip-pers">
+                    <div class="team-item ">
+                        <div class="team-image "><img src="./img/serve1.jpg " style="width: 400px; height: 600px; " alt="Member Photo ">
+                            <div class="team-detail ">
+                                <h5 class="font-alt ">Hi all</h5>
+                                <p class="font-serif ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
                             </div>
                         </div>
-                        <div class="team-descr font-alt">
-                            <div class="team-name">Jim Stone</div>
-                            <div class="team-role">Art Director</div>
+                        <div class="team-descr font-alt ">
+                            <div class="team-name ">Koulali Med</div>
+                            <div class="team-role ">Art </div>
                         </div>
                     </div>
                 </div>
-                <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <div class="equip-pers">
                     <div class="team-item">
-                        <div class="team-image"><img src="./img/serve2.jpg" style="width: 400px; height: 600px;" alt="Member Photo">
-                            <div class="team-detail">
-                                <h5 class="font-alt">Good day</h5>
-                                <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                                <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
-                                            class="fa fa-twitter"></i></a><a href="#"><i
-                                            class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
-                                </div>
+                        <div class="team-image "><img src="./img/serve2.jpg " style="width: 400px; height: 600px; " alt="Member Photo ">
+                            <div class="team-detail ">
+                                <h5 class="font-alt ">Good day</h5>
+                                <p class="font-serif ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
                             </div>
                         </div>
-                        <div class="team-descr font-alt">
-                            <div class="team-name">Andy River</div>
-                            <div class="team-role">Creative director</div>
+                        <div class="team-descr font-alt ">
+                            <div class="team-name ">Yassir ber</div>
+                            <div class="team-role ">Creative </div>
                         </div>
                     </div>
                 </div>
-                <div class="mb-sm-20 wow fadeInUp col-md-4 col-sm-6 col-xs-12" onclick="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                    <div class="team-item">
-                        <div class="team-image"><img src="./img/serve3.jpg" alt="Member Photo" style="width: 400px; height: 600px;">
-                            <div class="team-detail">
-                                <h5 class="font-alt">Yes, it's me</h5>
-                                <p class="font-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                                <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
-                                            class="fa fa-twitter"></i></a><a href="#"><i
-                                            class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a>
-                                </div>
+                <div class="equip-pers">
+                    <div class="team-item ">
+                        <div class="team-image "><img src="./img/serve3.jpg " alt="Member Photo " style="width: 400px; height: 600px; ">
+                            <div class="team-detail ">
+                                <h5 class="font-alt ">Yes, it's me</h5>
+                                <p class="font-serif ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
                             </div>
-                        </div>
-                        <div class="team-descr font-alt">
-                            <div class="team-name">Dylan Woods</div>
-                            <div class="team-role">Developer</div>
+                            <div class="team-descr font-alt ">
+                                <div class="team-name ">Wijdan Pom</div>
+                                <div class="team-role ">serveuse</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
 
