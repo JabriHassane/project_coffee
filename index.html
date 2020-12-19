@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Indie+Flower&family=Lobster&display=swap" rel="stylesheet">
 
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -20,33 +21,35 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="./index.js"></script>
+
     <title>Oxford</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="position: absolute; left: 0; right: 0;">
-        <a class="navbar-brand" href="#" style="color: #fff;">Oxford</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse nav-style" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
+    <header>
+        <nav>
+            <input id="nav-toggle" type="checkbox">
+            <div class="logo">OXFORD</div>
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Menu</a></li>
+                <li><a href="#projects">Plats special</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </nav>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>
+    </header>
 
     <section>
-        <div style="height: 100vh; width: 100%; background-image: url(./img/image-cof-lait.jpg); background-size: cover; background-repeat: no-repeat; display: flex; align-items: center; justify-content: center;">
+        <div class="debut-page">
             <div class="caption-content">
                 <div class="font-alt mb-30 oxford-title-size-1" style="text-align: center;"> Hello &amp; welcome <br> To
                 </div>
@@ -117,186 +120,138 @@
     </section>
 
     <section class="module" id="specialities">
-        <div class="container confort">
-            <div class="row">
-                <div class="col-sm-12 col-sm-offset-5">
-                    <div class="alt-module-subtitle"><span class="holder-w"></span>
-                        <h5 class="font-serif">Take a look at</h5><span class="holder-w"></span>
+        <div class="container-fluid">
+            <h1 class="text-center mb-3">Menu Populaire</h1>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner row w-100 mx-auto">
+                    <div class="carousel-item col-md-4 active">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/allonge.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Allonger</h4>
+                                <p class="card-text text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam consectetur eos quis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/icecoffe.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Ice Coffee</h4>
+                                <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora odit velit architecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/petit-dej.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Petit Dejenie</h4>
+                                <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora odit velit architecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/spanish-coffee.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Spanish Coffee</h4>
+                                <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora odit velit architecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/pizza (1).jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Pizza</h4>
+                                <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora odit velit architecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/salade.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Salade</h4>
+                                <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora odit velit architecto.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item col-md-4">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="img/pancake.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h4 class="card-title text-center">Pancke</h4>
+                                <p class="card-text text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora odit velit architecto.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 col-sm-offset-2">
-                    <h2 class="module-title font-alt">Our Specialities</h2>
-                </div>
-            </div>
-            <div class="row multi-columns-row">
-                <div class="col-sm-6 col-md-3 col-lg-3">
-                    <div class="content-box">
-                        <div class="content-box-image"><img src="./img/petit-dej.jpg" alt="petit-dej" style="width: 90%; height: 100%;"></div>
-                        <h3 class="content-box-title font-serif">petit déjeuner</h3>
-                        Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-3 col-lg-3">
-                    <div class="content-box">
-                        <div class="content-box-image"><img src="./img/icecoffe.jpg" alt="icecoffe" style="width: 75%; height: 50%;"></div>
-                        <h3 class="content-box-title font-serif">iced coffee</h3>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3">
-                    <div class="content-box">
-                        <div class="content-box-image"><img src="./img/allonge.jpg" alt="allongé" style="width: 75%; height: 50%;"></div>
-                        <h3 class="content-box-title font-serif">allongé</h3>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 col-lg-3">
-                    <div class="content-box">
-                        <div class="content-box-image"><img src="./img/spanish-coffee.jpg" alt="spanish coffee" style="width: 110%; height: 110%;"></div>
-                        <h3 class="content-box-title font-serif">spanish coffee</h3>Careful attention to detail and clean, well structured code ensures a smooth user experience for all your visitors.
-                    </div>
-                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="cover">
-            <div class="cover-cof">
-                <h2>THE BEST RESTAURANT IN TOWN<br> ENJOY YOUR MEALE</h2>
-            </div>
-        </div>
-    </section>
 
     <section class="module" id="menu">
-        <div class="container confort">
-            <div class="row">
-                <div class="col-sm-12 col-sm-offset-5">
-                    <div class="alt-module-subtitle"><span class="holder-w"></span>
-                        <h5 class="font-serif">Most popular menu</h5><span class="holder-w"></span>
-                    </div>
-                </div>
-            </div>
+        <div class="container confort" style="background: rgba(0, 0, 0, 0.5);">
             <div class="row">
                 <div class="col-sm-12 col-sm-offset-2">
+                    <h5 class="font-serif text-center">Most popular menu</h5>
                     <h2 class="module-title font-alt">Popular Dishes</h2>
                 </div>
             </div>
-            <div class="row multi-columns-row">
-                <div class="col-sm-6">
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-                                <div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">10.5 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-                                <div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">14.5 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-                                <div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">18.5 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-                                <div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">15.9 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-                                <div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">16.4 DH</h4>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
                 </div>
-                <div class="col-sm-6">
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Wild Mushroom Bucatini with Kale</h4>
-                                <div class="menu-detail font-serif">Mushroom / Veggie / White Sources</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">10.5 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Lemon and Garlic Green Beans</h4>
-                                <div class="menu-detail font-serif">Lemon / Garlic / Beans</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">14.5 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">LambBeef Kofka Skewers with Tzatziki</h4>
-                                <div class="menu-detail font-serif">Lamb / Wine / Butter</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">18.5 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Imported Oysters Grill (5 Pieces)</h4>
-                                <div class="menu-detail font-serif">Oysters / Veggie / Ginger</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">15.9 DH</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <div class="row">
-                            <div class="col-sm-8">
-                                <h4 class="menu-title font-alt">Meatloaf with Black Pepper-Honey BBQ</h4>
-                                <div class="menu-detail font-serif">Pepper / Chicken / Honey</div>
-                            </div>
-                            <div class="col-sm-4 menu-price-detail">
-                                <h4 class="menu-price font-alt">16.4 DH</h4>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
+                </div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                </div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
+                </div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
+                </div>
+                <div class="col-md-6 col-lg-6 menu-item">
+                    Lorem ipsum dolor sit amet consectetur.
+                    <h6>Prix : xx Dh</h6>
                 </div>
             </div>
             <div class="check-menu">
@@ -308,7 +263,7 @@
 
     <section class="module pt-0 pb-0">
         <div class="row position-relative m-0" style="background-color: rgba(231, 231, 231, 0.795);">
-            <div class="order col-xs-12 col-md-6 side-image-text">
+            <div class="order col-xs-12 col-md-6 side-image-text" style="text-align: center;">
                 <div class="row">
                     <div class="col-sm-12">
                         <h2 class="module-title font-alt align-left">Demander en ligne</h2>
@@ -353,58 +308,13 @@
     </section>
 
 
-    <section id="team">
-        <div class="container">
-            <div class="teamtext">
-                <div>
-                    <h2>Meet Our Team</h2>
-                    <div>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
-                </div>
-            </div>
-            <div class="equipe">
-                <div class="equip-pers">
-                    <div class="team-item ">
-                        <div class="team-image "><img src="./img/serve1.jpg " style="width: 400px; height: 600px; " alt="Member Photo ">
-                            <div class="team-detail ">
-                                <h5 class="font-alt ">Hi all</h5>
-                                <p class="font-serif ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                            </div>
-                        </div>
-                        <div class="team-descr font-alt ">
-                            <div class="team-name ">Koulali Med</div>
-                            <div class="team-role ">Art </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="equip-pers">
-                    <div class="team-item">
-                        <div class="team-image "><img src="./img/serve2.jpg " style="width: 400px; height: 600px; " alt="Member Photo ">
-                            <div class="team-detail ">
-                                <h5 class="font-alt ">Good day</h5>
-                                <p class="font-serif ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                            </div>
-                        </div>
-                        <div class="team-descr font-alt ">
-                            <div class="team-name ">Yassir ber</div>
-                            <div class="team-role ">Creative </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="equip-pers">
-                    <div class="team-item ">
-                        <div class="team-image "><img src="./img/serve3.jpg " alt="Member Photo " style="width: 400px; height: 600px; ">
-                            <div class="team-detail ">
-                                <h5 class="font-alt ">Yes, it's me</h5>
-                                <p class="font-serif ">Lorem ipsum dolor sit amet, consectetur adipiscing elit lacus, a&amp;nbsp;iaculis diam.</p>
-                            </div>
-                            <div class="team-descr font-alt ">
-                                <div class="team-name ">Wijdan Pom</div>
-                                <div class="team-role ">serveuse</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
+
+
+    <section id="menuslid">
+
+
     </section>
 
 

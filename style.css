@@ -8,8 +8,127 @@ body {
     padding: 0;
 }
 
-.nav-style ul li a {
-    color: #fff !important;
+nav {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 5%;
+    height: 100px;
+    background-color: transparent;
+}
+
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+}
+
+nav .links {
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .links li {
+    list-style: none;
+}
+
+nav .links a {
+    display: block;
+    padding: 1em;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav-toggle {
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    nav .logo {
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+    nav .links {
+        float: none;
+        position: fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, .8);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .5s ease-in-out;
+    }
+    nav .links a {
+        font-size: 20px;
+    }
+    nav :checked~.links {
+        bottom: 0;
+    }
+    nav .icon-burger {
+        display: block;
+    }
+    nav :checked~.icon-burger .line:nth-child(1) {
+        transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(3) {
+        transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked~.icon-burger .line:nth-child(2) {
+        opacity: 0;
+    }
+}
+
+.debut-page {
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img/image-cof-lait.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
 }
 
 .caption-content {
@@ -19,6 +138,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 .btn.btn-border-w {
@@ -103,25 +223,6 @@ body {
     height: 200px;
 }
 
-.cover-cof {
-    background-color: transparent;
-    height: 10vh;
-    text-align: center;
-    font: 'langar', bolder, white !important;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10em;
-    height: 3em;
-    margin: 0;
-    padding: 0;
-    font-size: 3em;
-    letter-spacing: 5px;
-    transition: .5s;
-    text-shadow: 1px 0 10px rgb(39, 36, 36);
-}
-
 .check-menu {
     height: 100px;
     padding: 50px;
@@ -148,12 +249,19 @@ body {
     background: linear-gradient(rgba(156, 156, 156, 0.61), rgba(0, 0, 0, 0.26)), url(./img/bgmenu.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    color: black;
+    color: #fff;
     font: 'langar', bolder;
 }
 
-.module {
-    margin-top: 12rem;
+.menu-item {
+    font-family: Indie Flower, sans-serif;
+    font-size: 1.8rem;
+    padding: 13px;
+}
+
+.menu-item h6 {
+    font-family: Caveat, sans-serif;
+    font-size: 1.5rem;
 }
 
 .order {
@@ -164,25 +272,67 @@ body {
     align-items: center;
 }
 
-#team {
-    margin-top: 3rem;
+@media (max-width:1000px) {
+    .ordre-image {
+        display: none;
+    }
 }
 
-.teamtext {
-    text-align: center;
-}
 
-.equipe {
-    display: flex;
-    text-align: center;
-}
+/* /////////////////////////// */
 
-.equip-pers {
-    margin: 15px;
-}
-
-.team-image img {
-    border: solid;
-    border-radius: 20px;
-    margin-bottom: 23px;
+@media (min-width: 768px) {
+    /* show 3 items */
+    .carousel-inner .active,
+    .carousel-inner .active+.carousel-item,
+    .carousel-inner .active+.carousel-item+.carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item,
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item+.carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    .carousel-inner .active.carousel-item+.carousel-item+.carousel-item+.carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .active.carousel-item-left+.carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item,
+    .carousel-item-next.carousel-item-left+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be abso position for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right+.carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item,
+    .carousel-item-prev.carousel-item-right+.carousel-item+.carousel-item+.carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
 }
