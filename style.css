@@ -21,12 +21,13 @@ nav {
 }
 
 nav .logo {
+    font-family: 'Merienda One', cursive;
     float: left;
     width: 40%;
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 4rem;
     color: #fff;
 }
 
@@ -50,8 +51,21 @@ nav .links a {
     padding: 1em;
     font-size: 16px;
     font-weight: bold;
+    font-family: Montserrat;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: #fff;
     text-decoration: none;
+}
+
+nav .links a:hover {
+    color: rgba(255, 255, 255, 0.75);
+    transition: .9s;
+    text-decoration: underline;
+}
+
+nav.black {
+    background: rgba(0, 0, 0, 0.699);
 }
 
 #nav-toggle {
@@ -246,7 +260,7 @@ nav .icon-burger .line {
 
 @import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
 #menu {
-    background: linear-gradient(rgba(156, 156, 156, 0.61), rgba(0, 0, 0, 0.26)), url(./img/bgmenu.jpg);
+    background: linear-gradient(rgba(156, 156, 156, 0.438), rgba(0, 0, 0, 0.26)), url(./img/bgmenu.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
@@ -335,4 +349,17 @@ nav .icon-burger .line {
         display: block;
         visibility: visible;
     }
+}
+
+#footer {
+    text-align: center;
+    padding: 3rem;
+}
+
+.social-icon {
+    margin: 20px 10px;
+}
+
+#footer a {
+    text-decoration: none;
 }
