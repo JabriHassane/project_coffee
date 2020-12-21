@@ -296,6 +296,9 @@ nav .icon-burger .line {
 /* /////////////////////////// */
 
 @media (min-width: 768px) {
+    .order{
+        margin: 0 auto;
+    }
     /* show 3 items */
     .carousel-inner .active,
     .carousel-inner .active+.carousel-item,
