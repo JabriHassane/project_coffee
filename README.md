@@ -15,4 +15,5 @@ C'est une template du site from scratch.
 
 # capture
 voir le dossier capture
-
+# les participents 
+voir le dossier capture (Capture13 et Capture)
