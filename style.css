@@ -15,19 +15,20 @@ nav {
     right: 0;
     top: 0;
     font-family: 'Montserrat', sans-serif;
-    padding: 0 5%;
-    height: 100px;
+    padding: 20px;
+    height: 5em;
     background-color: transparent;
 }
 
 nav .logo {
     font-family: 'Merienda One', cursive;
     float: left;
-    width: 40%;
-    height: 100%;
+    height: 15%;
+    width: 20%;
+    padding-top: 15px;
     display: flex;
     align-items: center;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
 }
 
@@ -44,12 +45,13 @@ nav .links {
 
 nav .links li {
     list-style: none;
+    font-size: 0.75em;
 }
 
 nav .links a {
     display: block;
     padding: 1em;
-    font-size: 16px;
+    /* font-size: 1em; */
     font-weight: bold;
     font-family: Montserrat;
     letter-spacing: 2px;
@@ -65,7 +67,16 @@ nav .links a:hover {
 }
 
 nav.black {
+    height: 10px;
+    width: 100%;
     background: rgba(0, 0, 0, 0.699);
+}
+
+nav.black .logo {
+    padding-top: 0;
+    height: 10%;
+    width: 15%;
+    font-size: 2em;
 }
 
 #nav-toggle {
